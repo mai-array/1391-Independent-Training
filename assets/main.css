@@ -1,0 +1,464 @@
+:root {
+  --mmred:  #a8212a;
+  --red-hover: #880000;
+  --mmgold: #fccf19;
+  --white-text: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif; 
+}
+
+.md-typeset h1 {
+  color: black !important;
+  font-weight: 700 !important; /*bold everything*/
+}
+.md-nav__link--active {
+  font-weight: bold;
+}
+
+.home-button {
+  background-color: var(--mmred) !important;
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 2rem;      
+  font-size: 1rem;                 
+  border-radius: 999px;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: fit-content;
+  line-height: 1.1;
+  vertical-align: top;
+}
+
+.home-button:hover {
+  background-color: var(--red-hover) !important;       
+}
+
+
+/* Make sidebar nav items bigger */
+.md-nav__link {
+  font-size: 1rem;  
+}
+
+.md-nav__item .md-nav__link {
+  font-size: 1rem;
+}
+
+/*making the header bigger as well*/
+.md-header__title .md-header__topic {
+  color: white;
+  font-size: 1.3rem; 
+  font-weight: bold;
+}
+/* removing the text above the sidebar*/
+.md-nav__title {
+  display: none;
+}
+
+/*home icon*/
+
+.home-icon svg {
+  transition: transform 0.2s ease, fill 0.2s ease;
+  scale: 1.75;
+}
+
+.home-icon:hover svg {
+  transform: scale(1.1);
+  fill: var(--mmgold);
+}
+
+/*subteam dropdowns*/
+
+.subteam-details {
+  margin-top: 2rem;
+  max-width: 700px;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 0rem;
+  
+}
+
+
+.subteam-details summary {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+}
+
+.subteam-details[open] .subteam-text {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.subteam-details .subteam-text {
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  padding-left: 1.2rem
+
+}
+.subteam-text li {
+  list-style: none;             /* removing default bullet pt*/
+  position: relative;
+  padding-left: 1.5rem;        
+}
+
+.subteam-text li::before {
+  content: "➤";                
+  position: absolute;
+  left: 0;
+  color: #4287f5;
+  font-size: 1.1rem;
+}
+
+
+/* card stack css*/
+
+
+
+.simple-card {
+  background-color: rgb(255, 249, 249);
+  border: 2px solid #cd9191; 
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 1.5rem !important;
+}
+
+.simple-card:hover {
+  box-shadow: 0 8px 20px rgba(204, 31, 31, 0.25);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #cf7878;  /* line to seperate title from rest*/
+  padding-bottom: 0.5rem;             
+  margin-bottom: 1rem;    
+}
+
+.card-title {
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+  margin: 0;          /* remove default margins */
+  color: #000000;
+  margin-bottom: 0rem !important;
+  margin-top: 0rem !important;
+}
+
+.card-description {
+  font-size: 1.05rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.card-button {
+  background-color: var(--mmred); /* red button */
+  color: white !important;
+  text-decoration: none;
+  padding: 0.2rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+
+}
+
+.card-button:hover {
+  transition: background-color 0.4s ease;
+  background-color: #5d0e0e;
+}
+
+
+/* cleaning up header*/
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  border-bottom: 3px solid black;
+  padding-bottom: 0.5rem;
+}
+.page-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/*the top of each lesson page*/
+.lesson-title {
+  font-size: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.lesson-subtitle {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.lesson-back-inline {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+
+}
+
+.lesson-back-inline:hover {
+  text-decoration: underline;
+}
+
+
+
+/*card beginner intermediate advanced badges*/
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+  flex-wrap: wrap;
+}
+
+.card-level-badge {
+  display: inline-block;
+  background-color: rgba(211, 63, 73, 0.15);
+  color: #d33f49;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px; /* pill shape */
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Variants for different difficulty levels */
+.card-level-badge.advanced {
+  background-color: rgba(211, 63, 73, 0.15);
+  color: #d33f49;
+}
+
+.card-level-badge.intermediate {
+  background-color: rgba(244, 162, 89, 0.2);
+  color: #e1802c;
+}
+
+.card-level-badge.starting {
+  background-color: rgba(117, 0, 163, 0.2);
+  color: #3e2f70;
+}
+
+.card-level-badge.beginner {
+  background-color: rgba(81, 148, 0, 0.2);
+  color:#2e9a00;
+}
+
+.simple-card.completed .card-level-badge.starting {
+  background-color: #c7e4ce; /* soft pale green */
+  color: #2a5d2a;            /* darker green text */
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  user-select: none;
+  display: inline-block;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px; /* pill shape */
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.simple-card.completed .card-level-badge.beginner {
+  background-color: #c7e4ce; /* soft pale green */
+  color: #2a5d2a;            /* darker green text */
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  user-select: none;
+  display: inline-block;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px; /* pill shape */
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.simple-card.completed .card-level-badge.intermediate {
+  background-color: #c7e4ce; /* soft pale green */
+  color: #2a5d2a;            /* darker green text */
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  user-select: none;
+  display: inline-block;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px; /* pill shape */
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.simple-card.completed .card-level-badge.advanced {
+  background-color: #c7e4ce; /* soft pale green */
+  color: #2a5d2a;            /* darker green text */
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  user-select: none;
+  display: inline-block;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px; /* pill shape */
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* what is CAD article*/
+
+.lesson-article {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #111;
+  max-width: 800px;
+  margin-top: 2rem;
+}
+
+.lesson-article h2,
+.lesson-article h3 {
+  font-size: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.lesson-article p {
+  margin-bottom: 1.1rem;
+}
+
+
+/*when a lesson is completed, the card will turn green*/
+
+.simple-card.completed {
+  background-color: #f0fff4; /* soft green background */
+  border: 2px solid #8bcf9b;
+}
+
+.simple-card.completed:hover {
+  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.25); /* green glow */
+}
+
+.simple-card.completed .card-header {
+  border-bottom: 2px solid #8bcf9b; 
+}
+
+.green-button {
+  background-color: #4caf50 !important;
+  color: white !important;
+  cursor:pointer;
+  
+}
+
+.green-button:hover {
+  background-color: #3e8e41 !important;
+}
+
+.completed-lesson-button {
+  background-color: #4caf50 !important;
+  color: white !important;
+  cursor:pointer;
+  display:block;
+  margin: 1.5rem auto;
+  text-decoration: none;
+  padding: 0.75rem 13rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  transition: background-color 0.4s ease;
+}
+
+.completed-lesson-button:hover {
+  transition: background-color 0.5s ease;
+  background-color: #317233 !important;
+}
+
+.article-button {
+  background-color: rgb(177, 1, 1);
+  color: white !important;
+  text-decoration: none;
+  padding: 0.3rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  cursor:pointer;
+  box-shadow: 0 8px 20px rgba(112, 0, 0, 0.1)
+}
+
+.article-button:hover {
+  transition: background-color 0.4s ease;
+  background-color: rgb(133, 1, 1);
+}
+
+
+.header-w-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.header-w-button h2 {
+  margin: 0;
+}
+
+
+/*for making lists that are cute*/
+
+  .progress-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 600px;
+  }
+
+  .progress-list li {
+    list-style-type: none;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease;
+    font-size: 18px;
+    line-height: 1.4;
+    cursor: pointer;
+  }
+
+  .progress-list li:hover {
+    background-color: #f0f0f0;
+  }
+
+  .progress-list li.completed {
+    background-color: #d5ffe4;
+  }
+
+
+  .red-line {
+    height: 4px;
+    background-color: #f9d6d6; 
+    border-radius: 2px;
+    max-width: 1000px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
