@@ -2,7 +2,7 @@ title: FRCDesign.org
 <div id="lesson-id" data-lesson-id="frcdesign"></div>
 <h1 class="lesson-title">FRCDesign.org</h1>
 <p class="lesson-subtitle">
-  <a href="/design/cad/" class="lesson-back-inline">← Back to Lesson Overview</a>
+  <a href="/design/cad/index.html" class="lesson-back-inline">← Back to Lesson Overview</a>
 </p>
 
 

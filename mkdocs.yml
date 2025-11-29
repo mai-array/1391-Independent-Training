@@ -8,7 +8,7 @@ theme:
 
 docs_dir: docs
 site_url: https://mai-array.github.io/1391-Independent-Training/
-use_directory_urls: true
+use_directory_urls: false
 
 nav:
   - Home: index.md
